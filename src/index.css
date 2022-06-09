@@ -144,6 +144,7 @@ code {
 }
 
 .book__image {
+  margin-right: 15px;
   position: relative;
   width: 145px;
   height: 205px;
