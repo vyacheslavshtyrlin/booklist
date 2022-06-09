@@ -42,7 +42,7 @@ export default function BookForm({ onSubmit }) {
         id: Math.floor(Math.random() * 10000),
         name: name,
         author: author,
-        image: image,
+        image: image ,
       });
       setName("");
       setAuthor("");

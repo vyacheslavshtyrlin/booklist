@@ -1,10 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Book({ book, onDelete, onEditState, onEdit }) {
   const [isEdit, setIsEdit] = useState(false);
   const [name, setName] = useState(book.name);
   const [author, setAuthor] = useState(book.author);
   const [cover, setCover] = useState({});
+  const [isCover, setIsCover] = useState(false);
+
+  useEffect(() => {
+    if (Object.keys(book.image).length === 0) {
+      setIsCover(false);
+    } else {
+      setIsCover(true);
+    }
+  }, []);
 
   const uploadImage = async (e) => {
     const file = e.target.files[0];
@@ -77,7 +86,7 @@ export default function Book({ book, onDelete, onEditState, onEdit }) {
         </form>
       ) : (
         <div className="book__container">
-          {book.image ? (
+          {isCover ? (
             <img src={book.image} className="book__image" alt="cover"></img>
           ) : (
             <div className="book__cover">Здесь должна быть обложка</div>
