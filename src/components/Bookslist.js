@@ -36,7 +36,6 @@ export default function BookList() {
   };
   return (
     <div className="booklist">
-      <h2 className="booklist__title">Book List</h2>
       <BookForm onSubmit={addBook}></BookForm>
       <div className="book__list">
         {books.map((book) => (

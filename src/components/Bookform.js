@@ -24,7 +24,7 @@ export default function BookForm({ onSubmit, onEditState, onEdit }) {
 
   return (
     <form className="form">
-      <h2 className="form__title">Добавить книгу</h2>
+      <h2 className="form__title">Book List</h2>
       <input
         className="form__input"
         placeholder="Введите название"
