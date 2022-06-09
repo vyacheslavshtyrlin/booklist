@@ -13,6 +13,7 @@ export default function BookList() {
   };
 
   const addBook = (book) => {
+    console.log(book);
     if (book.name && book.author) {
       const newBook = [book, ...books];
       saveBook(newBook);
@@ -21,7 +22,8 @@ export default function BookList() {
   };
 
   const handlEditBook = (newValue) => {
-    if (newValue.name || newValue.author) {
+    console.log(newValue);
+    if (newValue.name || newValue.author || newValue.image) {
       const updatedBook = books.map((book) =>
         book.id === newValue.id ? newValue : book
       );
