@@ -115,7 +115,7 @@ code {
 
 .button__edit {
   background: url(./icons/Edit-Button.svg);
-  margin-top: 10px;
+  margin-bottom: 10px;
   width: 18px;
   height: 18px;
   background-position: 50%;
