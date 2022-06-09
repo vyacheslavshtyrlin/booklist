@@ -1,13 +1,112 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  margin: 0 auto;
+  max-width: 880px;
+  min-width: 320px;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: white;
+  background-color: black;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+
+
+.booklist {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 0 auto;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.form__title {
+  text-align: center;
+
+}
+.form__input {
+  margin-bottom: 10px;
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid rgba(255, 255, 255, 0.843);
+  outline: none;
+  background: transparent;
+  color: #fff;
+}
+
+
+.form__button-submit {
+  margin-top: 10px;
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient( 90deg, rgb(31, 181, 17) 0%, rgb(8, 240, 15) 100% );
+  color: #fff;
+  text-transform: capitalize;
+};
+
+.book__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.book {
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: linear-gradient( 90deg, rgb(17, 72, 181) 0%, rgb(167, 15, 222) 100% );
+}
+
+.book__container {
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button__delete {
+  margin-right: 5px;
+  background: url(./icons/Trash.svg);
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  background-position: 50%;
+  border: none;
+}
+
+.button__edit {
+  background: url(./icons/Edit-Button.svg);
+  width: 18px;
+  height: 18px;
+  background-position: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.button__close {
+  background: url(./icons/Close-Icon.svg);
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 18px;
+  height: 18px;
+  background-position: 50%;
+  border: none;
+  cursor: pointer;
 }
