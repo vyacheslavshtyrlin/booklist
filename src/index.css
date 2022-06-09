@@ -110,3 +110,7 @@ code {
   border: none;
   cursor: pointer;
 }
+
+.form__warning {
+  color: red;
+}
