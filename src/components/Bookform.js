@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function BookForm({ onSubmit, onEditState, onEdit }) {
+export default function BookForm({ onSubmit}) {
   const [name, setName] = useState("");
   const [author, setAuthor] = useState("");
   const handleInputName = (e) => {
