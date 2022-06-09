@@ -47,6 +47,7 @@ export default function BookForm({ onSubmit }) {
       setName("");
       setAuthor("");
       setWarning(false);
+      setImage({})
     } else {
       setWarning(true);
     }
